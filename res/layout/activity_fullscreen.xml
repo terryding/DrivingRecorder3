@@ -1,0 +1,149 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context=".FullscreenActivity" >
+
+    <!--
+         The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc.
+    -->
+
+    <SurfaceView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="648dp"
+        android:layout_height="432dp"
+        android:gravity="center"
+        android:keepScreenOn="true"/>
+
+    <!--
+         This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows.
+    -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" >
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent" >
+
+            <Button
+                android:id="@+id/record_button"
+                style="?buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/record_button" />
+            <Button
+                android:id="@+id/playback_button"
+                style="?buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/playback_button" />
+            <Button
+                android:id="@+id/call_button"
+                style="?buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/call_button" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/info_address"
+            style="?buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent" >
+    
+        	<TextView
+                android:id="@+id/speed"
+                
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:layout_weight="1"
+                android:textSize="20sp" />
+        	
+        	<TextView
+                android:id="@+id/direction"
+                
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:layout_weight="1"
+                android:textSize="20sp" />
+        	
+    		<TextView
+                android:id="@+id/address"
+				
+        		android:layout_width="0dp"
+        		android:layout_height="wrap_content" 
+        		android:layout_weight="8"       
+        		android:layout_marginLeft="20sp"
+		        android:textIsSelectable="true"
+        		android:textSize="20sp" />
+		</LinearLayout>
+		
+<!--         <LinearLayout -->
+<!--             android:id="@+id/info_bearing" -->
+<!--             style="?buttonBarButtonStyle" -->
+<!--             android:layout_width="match_parent" -->
+<!--             android:layout_height="wrap_content" -->
+<!--             android:layout_marginTop="50sp" -->
+<!--             android:layout_gravity="top|center_horizontal" -->
+<!--             android:background="@color/black_overlay" -->
+<!--             android:orientation="horizontal" -->
+<!--             tools:ignore="UselessParent" > -->
+    		
+<!--             <TextView -->
+<!--                 android:id="@+id/label_bearing" -->
+<!--                 android:layout_weight="1" -->
+<!--                 android:layout_width="wrap_content" -->
+<!--         		android:layout_height="wrap_content" -->
+<!--         		android:textIsSelectable="true" -->
+<!--         		android:textSize="20sp" -->
+<!--         		android:text="@string/label_bearing" /> -->
+<!--             <TextView -->
+<!--                 android:id="@+id/bearing" -->
+<!--                 android:layout_weight="6" -->
+<!--                 android:layout_width="wrap_content" -->
+<!--         		android:layout_height="wrap_content" -->
+<!--         		android:textIsSelectable="true" -->
+<!--         		android:textSize="20sp" /> -->
+            
+    		
+<!--     	</LinearLayout> -->
+    </FrameLayout>
+    
+<!--     <RelativeLayout -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="match_parent" -->
+<!--         android:fitsSystemWindows="true" > -->
+<!--         <TextView -->
+<!--                 android:id="@+id/speed" -->
+<!--                 style="?buttonBarButtonStyle" -->
+<!--                 android:layout_width="wrap_content" -->
+<!--                 android:layout_height="wrap_content" -->
+<!--                 android:layout_marginTop="60dp" -->
+<!--                 android:textIsSelectable="true" -->
+<!--                 android:textSize="20sp" /> -->
+        
+<!-- 	</RelativeLayout> -->
+
+</FrameLayout>
